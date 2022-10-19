@@ -42,30 +42,4 @@ export const InputStyled = styled.input`
     }
 ;
 `
-export const TextAreaStyled = styled.textarea`
-    width:90%;
-    height:80px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px 16px;
-    gap: 10px;
-    border: 1.5px solid var(--grey7);
-    border-radius:4px;
-    overflow-y: scroll;
-    resize: none;
-    transition: 0.5s ease;
 
-    ::placeholder{
-        color: var(--grey3);
-        font-size:16px;
-        font-weight:400;
-    }
-    :focus{
-        border: 1.5px solid var(--brand2);
-    }
-    :hover{
-        background-color:var(--grey8);
-        border:none;
-    }
-`

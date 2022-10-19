@@ -1,6 +1,7 @@
 import { TextAreaStyled, LabelStyled, Div } from "./styles";
 import { ITextArea } from "../../interfaces/textarea.interface";
-export function Input({label,...rest}:ITextArea){
+
+export function TextArea({label,...rest}:ITextArea){
     return(
         <Div>
             <LabelStyled>{label}</LabelStyled>

@@ -41,4 +41,27 @@ export const TextAreaStyled = styled.textarea`
         background-color:var(--grey8);
         border:none;
     }
+
+    ::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--grey7)
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--grey3);
+  border-radius:4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+
+}
 `
