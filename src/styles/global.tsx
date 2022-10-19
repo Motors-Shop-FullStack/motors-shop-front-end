@@ -53,11 +53,11 @@ a{
 ul, ol, li{
     list-style: none;
 }
-input{
+input, textarea{
     font-family: 'Inter', sans-serif;
     color: var(--grey2);
-    height: 16px;
-    max-width: 24px;
+    
+    max-width: 315px;
 }
 
 button{

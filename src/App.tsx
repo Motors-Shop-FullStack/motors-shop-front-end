@@ -1,5 +1,5 @@
+import { Input } from "./components/input";
 import GlobalStyles from "./styles/global";
-import { Typography } from "./styles/typography/typography";
 
 function App() {
   return (
