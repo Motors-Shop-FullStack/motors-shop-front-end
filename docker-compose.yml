@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm rebuild esbuild && yarn dev"
