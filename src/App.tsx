@@ -1,5 +1,12 @@
+import GlobalStyles from "./styles/global";
+import { Typography } from "./styles/typography/typography";
+
 function App() {
-  return <div>Teste</div>;
+  return (
+    <>
+      <GlobalStyles />
+    </>
+  );
 }
 
 export default App;
