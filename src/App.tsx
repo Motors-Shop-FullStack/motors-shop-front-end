@@ -1,9 +1,14 @@
+import { Button } from "./components/Button";
+import { Comment } from "./components/comment";
 import GlobalStyles from "./styles/global";
 
 function App() {
   return (
     <>
       <GlobalStyles />
+      <Comment>
+        <Button variant="disable">Comentar</Button>
+      </Comment>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ITextAreaStyled } from "../../interfaces/textarea.interface";
-
+import { propsWidth } from "../../utils/propsWidth";
 export const Div = styled.div`
   height: 84px;
   display: flex;
@@ -16,7 +16,8 @@ export const LabelStyled = styled.label`
   font-size: 14px;
 `;
 export const TextAreaStyled = styled.textarea<ITextAreaStyled>`
-  width: 90%;
+  max-width: 390px;
+  width: ${(props) => propsWidth(props.width)};
   height: 80px;
   display: flex;
   flex-direction: row;
