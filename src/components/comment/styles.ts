@@ -7,7 +7,7 @@ export const DivStyled = styled.div`
   height: 180px;
   justify-content: space-evenly;
 
-  @media (min-width: 724px) {
+  @media (min-width: 400px) {
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
@@ -20,11 +20,24 @@ export const DivStyled = styled.div`
 export const SectionTextArea = styled.section`
   border: 1.5px solid var(--grey7);
   border-radius: 4px;
-  @media (min-width: 724px) {
-    width: 60%;
+  @media (min-width: 400px) {
+    width: 70%;
     height: 100%;
-    border-color: blue;
+    border: none;
   }
 `;
 
-export const SectionButton = styled.section``;
+export const SectionButton = styled.section`
+  button {
+    width: 50%;
+  }
+  @media (min-width: 400px) {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+
+    button {
+      width: 90%;
+    }
+  }
+`;
