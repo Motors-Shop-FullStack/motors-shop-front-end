@@ -1,10 +1,11 @@
+import { Button } from "./components/Button";
 import GlobalStyles from "./styles/global";
-import { Typography } from "./styles/typography/typography";
 
 function App() {
   return (
     <>
       <GlobalStyles />
+      <Button variant={"grey1"}>Teste</Button>
     </>
   );
 }
