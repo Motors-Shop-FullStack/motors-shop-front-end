@@ -63,8 +63,6 @@ input{
 button{
     font-family: 'Inter', sans-serif;
     color: var(--grey2);
-    /* height: 48px; */
-    padding: 12px 28px;
     font-weight: 600;
     cursor: pointer;
     border: none;

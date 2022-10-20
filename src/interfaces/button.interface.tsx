@@ -3,14 +3,18 @@ import { ReactNode } from "react";
 export interface iButton {
   children?: ReactNode;
   size?: "big" | "medium";
-  width?: 25 | 50 | 75 | 90;
+  width?: 10 | 15 | 20 | 25 | 30 | 40 | 50 | 60 | 70 | 75 | 90;
   variant:
-    | "grey0"
+    | "grey1"
     | "negative"
     | "disable"
     | "brand1"
     | "brandOpacity"
     | "light"
+    | "lightOutline"
+    | "big45"
+    | "outline2"
+    | "outlineBrand"
     | "alert"
     | "sucess"
     | "brandDisable"
