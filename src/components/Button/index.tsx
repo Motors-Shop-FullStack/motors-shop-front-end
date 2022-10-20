@@ -3,15 +3,14 @@ import * as S from "./styles";
 
 export function Button({
   children,
-  variant = "grey0",
+  variant = "grey1",
   size = "big",
-  width = 50,
+  width,
+  ...rest
 }: iButton) {
   return (
-    <S.Div>
-      <S.Button size={size} width={width} variant={variant}>
-        {children}
-      </S.Button>
-    </S.Div>
+    <S.Button size={size} width={width} variant={variant} {...rest}>
+      {children}
+    </S.Button>
   );
 }

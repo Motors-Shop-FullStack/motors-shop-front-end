@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-export interface iButton {
+export interface iButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
   size?: "big" | "medium";
   width?: 10 | 15 | 20 | 25 | 30 | 40 | 50 | 60 | 70 | 75 | 90;

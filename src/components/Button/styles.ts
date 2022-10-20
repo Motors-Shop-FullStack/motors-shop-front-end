@@ -3,14 +3,6 @@ import { iButton } from "../../interfaces/button.interface";
 import { propsWidth } from "../../utils/propsWidth";
 import { buttonsTypes } from "./buttonsTypes";
 
-export const Div = styled.div`
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-`;
-
 export const ButtonBase = styled.button<iButton>`
   display: flex;
   align-items: center;
