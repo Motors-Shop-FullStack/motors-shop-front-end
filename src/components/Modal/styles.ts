@@ -6,7 +6,7 @@ export const Container = styled.main`
   height: 100vh;
   z-index: 1000;
   top: 0;
-  position: fixed;
+  /* position: fixed; */
 `;
 
 export const ModalWrapper = styled.div`
@@ -26,7 +26,7 @@ export const ModalWrapper = styled.div`
 `;
 
 export const HeaderModal = styled.div`
-  width: 85%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -44,7 +44,7 @@ export const ButtonHeader = styled.button`
 
 export const BaseDivContent = styled.div`
   margin: 0 auto;
-  width: 85%;
+  width: 90%;
   margin-bottom: 20px;
   @media (min-width: 768px) {
     width: 88%;

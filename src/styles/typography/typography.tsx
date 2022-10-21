@@ -1,7 +1,7 @@
 import { iTypography } from "../../interfaces/typography.interface";
 import * as Typo from "./styles";
 
-export function Typography({ children, tag, fW }: iTypography) {
+export function Typography({ children, tag, fW, blck = false }: iTypography) {
   return (
     <>
       {tag == "h1" ? (
@@ -21,7 +21,9 @@ export function Typography({ children, tag, fW }: iTypography) {
       ) : tag == "p1" ? (
         <Typo.P1 fW={fW}>{children}</Typo.P1>
       ) : (
-        <Typo.P2 fW={fW}>{children}</Typo.P2>
+        <Typo.P2 fW={fW} blck={blck}>
+          {children}
+        </Typo.P2>
       )}
     </>
   );
