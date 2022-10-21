@@ -7,6 +7,7 @@ export const HeaderStyled = styled.header`
   justify-content: space-around;
   align-items: center;
   background-color: var(--grey10);
+  border-bottom: 2px solid var(--grey6);
 `;
 
 export const Burguer = styled.div`
