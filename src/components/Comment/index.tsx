@@ -1,5 +1,5 @@
 import { IComment } from "../../interfaces/comment.interface";
-import { TextArea } from "../textarea";
+import { TextArea } from "../Textarea";
 import { DivStyled, SectionButton, SectionTextArea } from "./styles";
 
 export function Comment({ children }: IComment) {

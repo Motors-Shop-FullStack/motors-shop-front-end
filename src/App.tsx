@@ -1,5 +1,5 @@
 import { Button } from "./components/Button";
-import { Comment } from "./components/comment";
+import { Comment } from "./components/Comment";
 import GlobalStyles from "./styles/global";
 
 function App() {
