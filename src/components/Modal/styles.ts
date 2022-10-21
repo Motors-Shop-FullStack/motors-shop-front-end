@@ -10,7 +10,7 @@ export const Container = styled.main`
 `;
 
 export const ModalWrapper = styled.div`
-  width: 95%;
+  width: 90%;
   max-width: 347px;
   background-color: var(--whiteFixed);
   margin: 95px 0;
@@ -19,34 +19,34 @@ export const ModalWrapper = styled.div`
   transform: translate(-50%, 0);
   border-radius: 8px;
 
-  @media (min-width: 348px) {
+  @media (min-width: 768px) {
     max-width: 520px;
     margin: 80px 0;
   }
 `;
 
 export const HeaderModal = styled.div`
-  width: 90%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   height: 56px;
   align-items: center;
-  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    width: 88%;
+  }
 `;
 
 export const ButtonHeader = styled.button`
   color: var(--grey4);
   background-color: transparent;
-  padding: 12px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
-export const DivContent = styled.div`
+export const BaseDivContent = styled.div`
   margin: 0 auto;
-  width: 90%;
+  width: 85%;
   margin-bottom: 20px;
+  @media (min-width: 768px) {
+    width: 88%;
+  }
 `;

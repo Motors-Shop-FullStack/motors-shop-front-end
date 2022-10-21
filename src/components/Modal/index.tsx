@@ -13,7 +13,7 @@ export function Modal({ children, title }: iModal) {
             <CgClose size={22} />
           </S.ButtonHeader>
         </S.HeaderModal>
-        <S.DivContent>{children}</S.DivContent>
+        {children}
       </S.ModalWrapper>
     </S.Container>
   );

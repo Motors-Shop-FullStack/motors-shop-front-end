@@ -9,15 +9,27 @@ export const propsWidth = (value: number | undefined) => {
     ? "25%"
     : value == 30
     ? "30%"
+    : value == 35
+    ? "35%"
     : value == 40
     ? "40%"
+    : value == 45
+    ? "45%"
     : value == 50
     ? "50%"
+    : value == 55
+    ? "55%"
     : value == 60
     ? "60%"
+    : value == 65
+    ? "65%"
     : value == 70
     ? "70%"
     : value == 75
     ? "75%"
+    : value == 80
+    ? "80%"
+    : value == 85
+    ? "85%"
     : "90%";
 };
