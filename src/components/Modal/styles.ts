@@ -10,13 +10,19 @@ export const Container = styled.main`
 `;
 
 export const ModalWrapper = styled.div`
-  width: 520px;
+  width: 95%;
+  max-width: 347px;
   background-color: var(--whiteFixed);
-  margin: 90px 0;
+  margin: 95px 0;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
   border-radius: 8px;
+
+  @media (min-width: 348px) {
+    max-width: 520px;
+    margin: 80px 0;
+  }
 `;
 
 export const HeaderModal = styled.div`
