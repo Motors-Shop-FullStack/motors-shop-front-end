@@ -1,4 +1,5 @@
 import { Modal } from "./components/Modal";
+import { CreateAdModal } from "./components/Modal/CreateAdModal";
 import { UpdateAdModal } from "./components/Modal/UpdateAdModal";
 import GlobalStyles from "./styles/global";
 
@@ -7,8 +8,8 @@ function App() {
     <>
       <GlobalStyles />
 
-      <Modal title={"Editar anúncio"}>
-        <UpdateAdModal />
+      <Modal title={"Criar anuncio"}>
+        <CreateAdModal />
       </Modal>
     </>
   );
