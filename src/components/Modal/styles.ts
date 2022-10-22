@@ -50,3 +50,5 @@ export const BaseDivContent = styled.div`
     width: 88%;
   }
 `;
+
+export const BaseDivInputs = styled.div``;

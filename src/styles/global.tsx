@@ -59,7 +59,7 @@ input, textarea{
     font-family: 'Inter', sans-serif;
     color: var(--grey2);
     
-    max-width: 315px;
+    /* max-width: 315px; */
 }
 
 button{

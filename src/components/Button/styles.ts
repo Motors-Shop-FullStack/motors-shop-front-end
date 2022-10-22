@@ -8,6 +8,7 @@ export const ButtonBase = styled.button<iButton>`
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+  margin: ${(props) => props.marginButton};
   height: ${(props) => (props.size == "medium" ? "38px" : "48px")};
   width: ${(props) => propsWidth(props.width)};
 `;

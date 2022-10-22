@@ -7,7 +7,7 @@ import * as S from "./styles";
 
 export function UpdateAdModal() {
   return (
-    <S.DivUpdateAdContent>
+    <S.DivUpdateAdContent as="form">
       <DoubleButton
         label={"Tipo de anuncio"}
         firstButtonText={"Venda"}
@@ -18,11 +18,27 @@ export function UpdateAdModal() {
       <Typography tag={"p2"} fW={500} blck>
         Infomações do veículo
       </Typography>
-      <Input label={"Título"} />
-      <Input label={"Ano"} />
-      <Input label={"Quilometragem"} />
-      <Input label={"Preço"} />
-      <Textarea label={"Descrição"} />
+      <Input
+        label={"Título"}
+        placeholder={
+          "Mercedes Benz A 200 CGI ADVANCE SEDAN Mercedes Benz A 200"
+        }
+        marginDiv
+      />
+      <S.DivInputs>
+        <Input label={"Ano"} className={"firstInput"} placeholder={"2018"} />
+        <Input
+          label={"Quilometragem"}
+          className={"secondInput"}
+          placeholder={"0"}
+        />
+        <Input
+          label={"Preço"}
+          className={"thirdInput"}
+          placeholder={"50.000,00"}
+        />
+      </S.DivInputs>
+      <Textarea label={"Descrição"} marginDiv />
       <DoubleButton
         label={"Tipo de veículo"}
         firstButtonText={"Carro"}
@@ -37,10 +53,22 @@ export function UpdateAdModal() {
         secondButtonText={"Não"}
         secondButtonVariant={"brand1"}
       />
-      <Input label={"Imagem da capa"} />
-      <Input label={"1° Imagem da galeria"} />
-      <Input label={"2° Imagem da galeria"} />
-      <Button variant={"brandOpacity"}>
+      <Input
+        label={"Imagem da capa"}
+        placeholder={"https://image.com"}
+        marginDiv
+      />
+      <Input
+        label={"1° Imagem da galeria"}
+        placeholder={"https://image.com"}
+        marginDiv
+      />
+      <Input
+        label={"2° Imagem da galeria"}
+        placeholder={"https://image.com"}
+        marginDiv
+      />
+      <Button variant={"brandOpacity"} marginButton={"15px 0 30px 0"}>
         Adicionar campo para imagem da galeria
       </Button>
 

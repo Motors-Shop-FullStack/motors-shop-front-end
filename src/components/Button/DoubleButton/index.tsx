@@ -17,7 +17,6 @@ export function DoubleButton({
           {label}
         </Typography>
       ) : null}
-
       <Button variant={firstButtonVariant}>{firstButtonText}</Button>
       <Button variant={secondButtonVariant}>{secondButtonText}</Button>
     </S.DivButtonWrapper>

@@ -1,50 +1,18 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
-
-type iVariant =
-  | "grey1"
-  | "negative"
-  | "disable"
-  | "brand1"
-  | "brandOpacity"
-  | "light"
-  | "lightOutline"
-  | "big45"
-  | "outline2"
-  | "outlineBrand"
-  | "alert"
-  | "sucess"
-  | "brandDisable"
-  | "linkButton";
+import { iButtonVariant, iWidthProps } from "./types";
 
 export interface iButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
   size?: "big" | "medium";
-  width?:
-    | 10
-    | 15
-    | 20
-    | 25
-    | 30
-    | 35
-    | 40
-    | 45
-    | 50
-    | 55
-    | 60
-    | 65
-    | 70
-    | 75
-    | 80
-    | 85
-    | 90;
-
-  variant: iVariant;
+  width?: iWidthProps | number;
+  variant: iButtonVariant;
+  marginButton?: string;
 }
 
 export interface iDoubleButton {
   label?: string;
-  firstButtonVariant: iVariant;
+  firstButtonVariant: iButtonVariant;
   firstButtonText: ReactNode;
-  secondButtonVariant: iVariant;
+  secondButtonVariant: iButtonVariant;
   secondButtonText: ReactNode;
 }

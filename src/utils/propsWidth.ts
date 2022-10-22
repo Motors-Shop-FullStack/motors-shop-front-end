@@ -1,4 +1,4 @@
-export const propsWidth = (value: number | undefined) => {
+export const propsWidth = (value: number = 100) => {
   return value == 10
     ? "10%"
     : value == 15
@@ -31,5 +31,9 @@ export const propsWidth = (value: number | undefined) => {
     ? "80%"
     : value == 85
     ? "85%"
-    : "90%";
+    : value == 90
+    ? "90%"
+    : value == 100
+    ? "100%"
+    : `${value}px`;
 };
