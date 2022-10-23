@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ICard } from "../../interfaces/card.interface";
+import { collorTypes } from "./collorTypes";
 
 export const Container = styled.div`
   display: flex;
@@ -23,12 +23,23 @@ export const DivImage = styled.div`
   border: 2px solid var(--grey7);
 `;
 
+export const DivImage = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 312px;
+  height: 152px;
+  background: var(--grey7);
+  border: 2px solid var(--grey7);
+`;
+
 export const Image = styled.image`
   width: 262px;
   height: 150.28px;
   left: 25px;
   top: 1px;
-  background: url(${data.image});
+  background: url(${background});
 `;
 
 export const DivTitle = styled.div`
@@ -71,7 +82,7 @@ export const InitialsAnnoucing = styled.div`
   padding: 0px;
   width: 32px;
   height: 32px;
-  background: ${({ variant }) => collorTypes({ variant })};
+  background: var(--random ${collorTypes()});
   border-radius: 150px;
   color: var(--whiteFixed);
 `;
