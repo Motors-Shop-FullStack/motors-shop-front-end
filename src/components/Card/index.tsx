@@ -3,11 +3,16 @@ import * as Component from "./styles";
 import * as Font from "../../styles/typography/styles";
 import { numberFormatter } from "./formatterNumber";
 
-export function Card({ data }: iCard) {
+export function Card({ data }: ) {
   return (
     <Component.Container>
       <Component.DivImage>
-        <Component.Image>{data?.image}</Component.Image>
+        {user.advertiser?
+          <Component.Image background={data.image}></Component.Image>
+          :
+          <Component.Image background={data.image}></Component.Image>
+        }
+        
       </Component.DivImage>
       <Component.DivTitle>
         <Font.H7 fW={600}>{data.title}</Font.H7>
