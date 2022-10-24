@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { collorTypes } from "../../utils/collorTypes";
 
 export const HeaderStyled = styled.header`
   height: 80px;
@@ -57,19 +58,17 @@ export const SectionUser = styled.div`
   justify-content: space-evenly;
   margin-left: 15px;
   position: relative;
-  .test {
+  .drop-down {
     display: none;
     width: 200px;
     height: 202px;
-
-    /* Grey Scale/grey-9 */
 
     background: #f8f9fa;
     box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
   }
   :hover {
-    .test {
+    .drop-down {
       display: block;
       position: absolute;
       top: 90%;
@@ -79,5 +78,19 @@ export const SectionUser = styled.div`
       justify-content: space-around;
       padding: 20px;
     }
+  }
+`;
+export const Avatar = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 32px;
+  height: 32px;
+  background: var(${collorTypes()});
+  border-radius: 150px;
+  p {
+    color: var(--grey9);
   }
 `;

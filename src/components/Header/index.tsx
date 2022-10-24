@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Profile from "../../assets/Frame 4.svg";
 import Logo from "../../assets/logo.svg";
 import { iHeader } from "../../interfaces/header.interface";
 import { Typography } from "../../styles/typography/typography";
+import { splitName } from "../../utils/splitName";
 import { Button } from "../Button";
 import { NavBarModal } from "./nav_bar_modal";
 import * as S from "./styles";
 
-export function Header({ user }: iHeader) {
+export function Header({ advertiser }: iHeader) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ export function Header({ user }: iHeader) {
         </figure>
       </section>
       <S.SectionNav>
-        {isOpen && <NavBarModal user={user} setOpenModal={setIsOpen} />}
+        {isOpen && <NavBarModal user={advertiser} setOpenModal={setIsOpen} />}
         <S.Burguer onClick={() => setIsOpen(true)}>
           <GiHamburgerMenu size={20} />
         </S.Burguer>
@@ -31,13 +31,16 @@ export function Header({ user }: iHeader) {
 
             <Typography tag="p">Leilão</Typography>
           </S.Functionalities>
-          {user ? (
+          {advertiser ? (
             <S.SectionUser>
-              <figure>
-                <img src={Profile} alt="Profile image" />
-              </figure>
-              <Typography tag="p2">Samuel Leão</Typography>
-              <div className="test">
+              <S.Avatar>
+                <Typography tag="p2" fW={600}>
+                  {splitName(advertiser)}
+                </Typography>
+              </S.Avatar>
+              <Typography tag="p2">{advertiser}</Typography>
+
+              <div className="drop-down">
                 <Typography tag="p2">Editar Perfil</Typography>
                 <Typography tag="p2">Editar Endereço</Typography>
                 <Typography tag="p2">Minhas Compras</Typography>
