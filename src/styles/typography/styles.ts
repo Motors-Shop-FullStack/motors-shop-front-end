@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { iTypoStyledProps } from "../../interfaces/typography.interface";
 
 export const H1 = styled.h1`
@@ -50,4 +50,5 @@ export const P2 = styled.p<iTypoStyledProps>`
   font-size: 14px;
   line-height: 24px;
   font-weight: ${(props) => (props.fW == 500 ? 500 : 400)};
+  color: ${(props) => (props.blck ? css`var(--black)` : css`var(--grey2)`)};
 `;

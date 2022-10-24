@@ -1,10 +1,12 @@
-import styled from "styled-components";
-import { collorTypes } from "./collorTypes";
+import styled, { css } from "styled-components";
+import { collorTypes } from "../../utils/collorTypes";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: space-between;
+  width: 312px;
+  height: 350px;
 `;
 export const Div = styled.div`
   display: flex;
@@ -12,7 +14,7 @@ export const Div = styled.div`
   justify-content: left;
 `;
 
-export const DivImage = styled.div`
+export const DivImage = styled.figure`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -23,28 +25,38 @@ export const DivImage = styled.div`
   border: 2px solid var(--grey7);
 `;
 
-export const DivImage = styled.div`
+interface iActive {
+  active: boolean;
+}
+export const Active = styled.div<iActive>`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  box-sizing: border-box;
-  width: 312px;
-  height: 152px;
-  background: var(--grey7);
-  border: 2px solid var(--grey7);
+  align-items: center;
+  padding: 0px 8px;
+  gap: 10px;
+  width: 51px;
+  height: 24px;
+  left: 16px;
+  top: 11px;
+  position: absolute;
+  z-index: 1;
+  line-height: 24px;
+  background: ${(props) =>
+    props.active ? css`var(--brand1)` : css`var(--grey4)`};
+  p {
+    color: var(--whiteFixed);
+  }
 `;
 
-export const Image = styled.image`
-  width: 262px;
-  height: 150.28px;
-  left: 25px;
+export const Image = styled.img`
+  width: 90%;
   top: 1px;
-  background: url(${background});
+  position: relative;
 `;
 
 export const DivTitle = styled.div`
   flex: none;
-  order: 1;
   flex-grow: 0;
   width: 312px;
   height: 22px;
@@ -54,7 +66,6 @@ export const DivTitle = styled.div`
 
 export const DivDescription = styled.div`
   flex: none;
-  order: 2;
   flex-grow: 0;
   width: 312px;
   height: 22px;
@@ -66,11 +77,9 @@ export const DivAnnouncing = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   padding: 0px;
   gap: 8px;
   height: 32px;
-  width: 126px;
   color: var(--grey2);
 `;
 
@@ -82,9 +91,11 @@ export const InitialsAnnoucing = styled.div`
   padding: 0px;
   width: 32px;
   height: 32px;
-  background: var(--random ${collorTypes()});
+  background: var(${collorTypes()});
   border-radius: 150px;
-  color: var(--whiteFixed);
+  p {
+    color: var(--whiteFixed);
+  }
 `;
 
 export const DivKMPrice = styled.div`
@@ -105,7 +116,7 @@ export const DivKM = styled.div`
   justify-content: space-between;
   padding: 0px;
   gap: 12px;
-  width: 113px;
+  width: 120px;
   height: 32px;
 `;
 
@@ -116,9 +127,11 @@ export const KM = styled.div`
   align-items: center;
   padding: 4px 8px;
   gap: 10px;
-  width: 51px;
+  width: 60px;
   height: 32px;
   background: var(--brand4);
   border-radius: 4px;
-  color: var(--brand1);
+  p {
+    color: var(--brand1);
+  }
 `;
