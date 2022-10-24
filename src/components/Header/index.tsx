@@ -19,7 +19,7 @@ export function Header({ user }: iHeader) {
         </figure>
       </section>
       <S.SectionNav>
-        {isOpen && <NavBarModal setOpenModal={setIsOpen} />}
+        {isOpen && <NavBarModal user={user} setOpenModal={setIsOpen} />}
         <S.Burguer onClick={() => setIsOpen(true)}>
           <GiHamburgerMenu size={20} />
         </S.Burguer>
@@ -32,15 +32,21 @@ export function Header({ user }: iHeader) {
             <Typography tag="p">Leilão</Typography>
           </S.Functionalities>
           {user ? (
-            <S.SectionRegister>
+            <S.SectionUser>
               <figure>
                 <img src={Profile} alt="Profile image" />
               </figure>
-              <Typography tag="p">Samuel Leão</Typography>
-            </S.SectionRegister>
+              <Typography tag="p2">Samuel Leão</Typography>
+              <div className="test">
+                <Typography tag="p2">Editar Perfil</Typography>
+                <Typography tag="p2">Editar Endereço</Typography>
+                <Typography tag="p2">Minhas Compras</Typography>
+                <Typography tag="p2">Sair</Typography>
+              </div>
+            </S.SectionUser>
           ) : (
             <S.SectionRegister>
-              <Typography tag="p">Fazer Login</Typography>
+              <Typography tag="p2">Fazer Login</Typography>
               <Button variant="big45" width={50}>
                 Cadastrar
               </Button>

@@ -47,6 +47,37 @@ export const SectionRegister = styled.nav`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-left: 15px;
+`;
+export const SectionUser = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
   justify-content: space-evenly;
   margin-left: 15px;
+  position: relative;
+  .test {
+    display: none;
+    width: 200px;
+    height: 202px;
+
+    /* Grey Scale/grey-9 */
+
+    background: #f8f9fa;
+    box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+  :hover {
+    .test {
+      display: block;
+      position: absolute;
+      top: 90%;
+      left: 0%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 20px;
+    }
+  }
 `;

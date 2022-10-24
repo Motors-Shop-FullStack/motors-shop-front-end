@@ -3,7 +3,7 @@ import Logo from "../../assets/logo.svg";
 import { Typography } from "../../styles/typography/typography";
 import { Button } from "../Button";
 import * as S from "./nav_bar_styled";
-export function NavBarModal({ setOpenModal }: any) {
+export function NavBarModal({ user, setOpenModal }: any) {
   const closeModal = () => {
     setOpenModal(false);
   };
@@ -19,23 +19,44 @@ export function NavBarModal({ setOpenModal }: any) {
       </S.HeaderModal>
       <section>
         <S.Functionalities>
-          <Typography tag="p" fW={500}>
+          <Typography tag="p2" fW={500}>
             Carros
           </Typography>
 
-          <Typography tag="p" fW={500}>
+          <Typography tag="p2" fW={500}>
             Motos
           </Typography>
 
-          <Typography tag="p" fW={500}>
+          <Typography tag="p2" fW={500}>
             Leilão
           </Typography>
         </S.Functionalities>
         <S.Functionalities>
-          <Typography tag="p" fW={500}>
-            Fazer Login
-          </Typography>
-          <Button variant="big45">Cadastrar</Button>
+          {user ? (
+            <>
+              {" "}
+              <Typography tag="p2" fW={500}>
+                Editar Perfil
+              </Typography>
+              <Typography tag="p2" fW={500}>
+                Editar endereço
+              </Typography>
+              <Typography tag="p2" fW={500}>
+                Minhas Compras
+              </Typography>
+              <Typography tag="p2" fW={500}>
+                Sair
+              </Typography>
+            </>
+          ) : (
+            <>
+              {" "}
+              <Typography tag="p2" fW={500}>
+                Fazer Login
+              </Typography>
+              <Button variant="big45">Cadastrar</Button>
+            </>
+          )}
         </S.Functionalities>
       </section>
     </S.NavBarModalStyled>
