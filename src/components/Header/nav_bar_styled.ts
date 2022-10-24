@@ -8,6 +8,12 @@ export const NavBarModalStyled = styled.div`
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
+  p {
+    cursor: pointer;
+  }
+  p:hover {
+    color: var(--grey3);
+  }
 `;
 
 export const HeaderModal = styled.div`
