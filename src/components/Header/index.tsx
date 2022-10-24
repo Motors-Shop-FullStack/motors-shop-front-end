@@ -25,11 +25,15 @@ export function Header({ advertiser }: iHeader) {
         </S.Burguer>
         <S.NavItens>
           <S.Functionalities>
-            <Typography tag="p2">Carros</Typography>
-
-            <Typography tag="p2">Motos</Typography>
-
-            <Typography tag="p2">Leilão</Typography>
+            <Button variant="linkButton" width={20}>
+              Carros
+            </Button>
+            <Button variant="linkButton" width={20}>
+              Motos
+            </Button>
+            <Button variant="linkButton" width={20}>
+              Leilão
+            </Button>
           </S.Functionalities>
           {advertiser ? (
             <S.SectionUser>

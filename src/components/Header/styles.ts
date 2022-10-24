@@ -5,10 +5,11 @@ export const HeaderStyled = styled.header`
   height: 80px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--grey10);
   border-bottom: 2px solid var(--grey6);
+  padding: 0 60px;
 `;
 
 export const Burguer = styled.div`
@@ -77,6 +78,12 @@ export const SectionUser = styled.div`
       flex-direction: column;
       justify-content: space-around;
       padding: 20px;
+      p {
+        cursor: pointer;
+      }
+      p:hover {
+        color: var(--grey3);
+      }
     }
   }
 `;

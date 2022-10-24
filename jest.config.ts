@@ -76,7 +76,7 @@ export default {
   // ],
 
   // An array of file extensions your modules use
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node", "svg"],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
@@ -166,6 +166,7 @@ export default {
   // A map from regular expressions to paths to transformers
   transform: {
     "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.svg$": "<rootDir>/fileTransformer.ts",
   },
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
