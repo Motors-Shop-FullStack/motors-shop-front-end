@@ -8,6 +8,8 @@ export default createGlobalStyle`
         outline: 0;
     }
 :root{
+    --black: #000000;
+
     --brand1: #4529E6;
     --brand2: #5126EA;
     --brand3: #B0A6F0;
@@ -57,7 +59,7 @@ input, textarea{
     font-family: 'Inter', sans-serif;
     color: var(--grey2);
     
-    max-width: 315px;
+    /* max-width: 315px; */
 }
 
 button{
