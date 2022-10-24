@@ -6,10 +6,17 @@ export function Button({
   variant = "grey1",
   size = "big",
   width,
+  marginButton,
   ...rest
 }: iButton) {
   return (
-    <S.Button size={size} width={width} variant={variant} {...rest}>
+    <S.Button
+      size={size}
+      width={width}
+      variant={variant}
+      marginButton={marginButton}
+      {...rest}
+    >
       {children}
     </S.Button>
   );
