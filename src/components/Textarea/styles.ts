@@ -1,11 +1,16 @@
 import styled from "styled-components";
-import { ITextAreaStyled } from "../../interfaces/textarea.interface";
+import {
+  ITextArea,
+  ITextAreaStyled,
+} from "../../interfaces/textarea.interface";
 import { propsWidth } from "../../utils/propsWidth";
-export const Div = styled.div`
+
+export const Div = styled.div<ITextArea>`
   height: 84px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin: ${(props) => (props.marginDiv ? "15px auto" : 0)};
 `;
 
 export const LabelStyled = styled.label`
@@ -16,7 +21,7 @@ export const LabelStyled = styled.label`
   font-size: 14px;
 `;
 export const TextAreaStyled = styled.textarea<ITextAreaStyled>`
-  max-width: 390px;
+  /* max-width: 390px; */
   width: ${(props) => propsWidth(props.width)};
   height: 80px;
   display: flex;
