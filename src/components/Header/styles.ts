@@ -47,6 +47,6 @@ export const SectionRegister = styled.nav`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-left: 15px;
 `;

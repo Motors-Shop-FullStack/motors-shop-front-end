@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Header />
+      <Header user={"Oi"} />
     </>
   );
 }
