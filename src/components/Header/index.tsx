@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Logo from "../../assets/logo.svg";
+import LOGO from "../../assets/logo.svg";
 import { iHeader } from "../../interfaces/header.interface";
 import { Typography } from "../../styles/typography/typography";
 import { splitName } from "../../utils/splitName";
@@ -15,7 +15,7 @@ export function Header({ advertiser }: iHeader) {
     <S.HeaderStyled>
       <section>
         <figure>
-          <img src={Logo} alt="Logo" />
+          <img src={LOGO} alt="Logo" />
         </figure>
       </section>
       <S.SectionNav>
@@ -25,11 +25,11 @@ export function Header({ advertiser }: iHeader) {
         </S.Burguer>
         <S.NavItens>
           <S.Functionalities>
-            <Typography tag="p">Carros</Typography>
+            <Typography tag="p2">Carros</Typography>
 
-            <Typography tag="p">Motos</Typography>
+            <Typography tag="p2">Motos</Typography>
 
-            <Typography tag="p">Leilão</Typography>
+            <Typography tag="p2">Leilão</Typography>
           </S.Functionalities>
           {advertiser ? (
             <S.SectionUser>
