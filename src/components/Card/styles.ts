@@ -53,6 +53,9 @@ export const Image = styled.img`
   width: 90%;
   top: 1px;
   position: relative;
+  :hover {
+    width: 100%;
+  }
 `;
 
 export const DivTitle = styled.div`
