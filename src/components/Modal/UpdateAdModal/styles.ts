@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { BaseDivContent, BaseDivInputs } from "../styles";
 
-export const DivUpdateAdContent = styled(BaseDivContent)``;
+export const DivUpdateAdContent = styled(BaseDivContent)`
+  margin: 20px auto;
+`;
 
 export const DivInputs = styled(BaseDivInputs)`
   width: 100%;

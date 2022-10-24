@@ -15,4 +15,5 @@ export interface iDoubleButton {
   firstButtonText: ReactNode;
   secondButtonVariant: iButtonVariant;
   secondButtonText: ReactNode;
+  width?: iWidthProps | number;
 }
