@@ -31,6 +31,9 @@ export function UpdateProfileModal() {
           firstButtonVariant={"negative"}
           secondButtonText={"Salvar alterações"}
           secondButtonVariant={"brand1"}
+          position={"flex-end"}
+          firstButtonChangeWidth={126}
+          secondButtonChangeWidth={193}
         />
       </S.DivUpdateProfileContent>
     </Modal>

@@ -93,6 +93,8 @@ export function UpdateAdModal() {
           firstButtonVariant={"negative"}
           secondButtonText={"Salvar alterações"}
           secondButtonVariant={"brandDisable"}
+          firstButtonChangeWidth={262}
+          secondButtonChangeWidth={185}
         />
       </S.DivUpdateAdContent>
     </Modal>
