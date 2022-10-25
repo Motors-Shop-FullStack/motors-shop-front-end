@@ -15,6 +15,8 @@ export const propsWidth = (value: number = 100) => {
     ? "40%"
     : value == 45
     ? "45%"
+    : value == 48
+    ? "48%"
     : value == 50
     ? "50%"
     : value == 55

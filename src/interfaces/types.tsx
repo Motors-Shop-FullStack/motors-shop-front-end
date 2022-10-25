@@ -23,6 +23,7 @@ export type iWidthProps =
   | 35
   | 40
   | 45
+  | 48
   | 50
   | 55
   | 60
