@@ -1,11 +1,11 @@
-import { Modal } from "..";
 import { Typography } from "../../../styles/typography/typography";
 import { DoubleButton } from "../../Button/DoubleButton";
 import * as S from "./styles";
+import { ModalWrapper } from "../../Modal/ModalWrapper";
 
 export function DeleteAdMotal() {
   return (
-    <Modal title={"Excluir anúncio"}>
+    <ModalWrapper title={"Excluir anúncio"}>
       <S.DivDeleteContentModal>
         <Typography tag={"h7"}>
           Tem certeza que deseja remover este anúncio?
@@ -24,6 +24,6 @@ export function DeleteAdMotal() {
           secondButtonChangeWidth={40}
         />
       </S.DivDeleteContentModal>
-    </Modal>
+    </ModalWrapper>
   );
 }

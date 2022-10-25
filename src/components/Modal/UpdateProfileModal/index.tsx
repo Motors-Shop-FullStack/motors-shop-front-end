@@ -1,13 +1,13 @@
-import { Modal } from "..";
 import { Typography } from "../../../styles/typography/typography";
 import { DoubleButton } from "../../Button/DoubleButton";
 import { Input } from "../../Input";
 import { Textarea } from "../../Textarea";
 import * as S from "./styles";
+import { ModalWrapper } from "../../Modal/ModalWrapper";
 
 export function UpdateProfileModal() {
   return (
-    <Modal title={"Editar perfil"}>
+    <ModalWrapper title={"Editar perfil"}>
       <S.DivUpdateProfileContent as="form">
         <Typography tag={"p2"} fW={500} blck>
           Infomações pessoais
@@ -36,6 +36,6 @@ export function UpdateProfileModal() {
           secondButtonChangeWidth={193}
         />
       </S.DivUpdateProfileContent>
-    </Modal>
+    </ModalWrapper>
   );
 }
