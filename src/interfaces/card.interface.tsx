@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-import { boolean, number, string } from "yup";
 export interface iCard {
   data: {
     id: string;
