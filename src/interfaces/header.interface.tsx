@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 export interface iHeader {
-  user?: string;
+  advertiser?: string;
 }
 export interface iNavModal {
   setOpenModal: ReactNode;
