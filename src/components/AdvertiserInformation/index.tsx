@@ -18,13 +18,13 @@ export function AdvertiserInformation({
         <Typography tag="h6" fW={600}>
           {user.name}
         </Typography>
-        <Button variant={"brandOpacity"} width={40}>
+        <Button variant={"brandOpacity"} width={30}>
           {user.type}
         </Button>
       </S.SectionStyled>
       <Typography tag="p2">{user.description}</Typography>
       {create_ad && (
-        <Button variant="outlineBrand" width={30}>
+        <Button variant="outlineBrand" width={20}>
           Criar anuncio
         </Button>
       )}
