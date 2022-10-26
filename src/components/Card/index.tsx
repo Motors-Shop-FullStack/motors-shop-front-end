@@ -1,67 +1,68 @@
 import { iCard } from "../../interfaces/card.interface";
-import * as Component from "./styles";
+import * as S from "./styles";
 import { Typography } from "../../styles/typography/typography";
 import { numberFormatter } from "../../utils/formatterNumber";
 import { splitName } from "../../utils/splitName";
+import { Button } from "../Button";
 
 export function Card({ data }: iCard) {
-  //provider para verificar se está logado ou não
-
-  const logged = true;
+  //Verificar qual propriedade iremos utilizar do BD
+  const advertiser = true;
 
   return (
-    <Component.Container>
-      <Component.DivImage>
-        {logged ? (
-          <>
-            <Component.Image src={data.image} alt={data.title} />
-            <Component.Active active={data.active}>
-              <Typography tag={"p2"} fW={500}>
-                {data.active ? "Ativo" : "Inativo"}
-              </Typography>
-            </Component.Active>
-          </>
-        ) : (
-          <Component.Image src={data.image} alt={data.title} />
-        )}
-      </Component.DivImage>
-      <Component.DivTitle>
+    <S.Container>
+      <S.DivImage>
+        <S.Image src={data.image} alt={data.title} />
+      </S.DivImage>
+      <S.DivTitle>
         <Typography tag={"h7"} fW={600}>
           {data.title}
         </Typography>
-      </Component.DivTitle>
-      <Component.DivDescription>
+      </S.DivTitle>
+      <S.DivDescription>
         <Typography tag={"p2"} fW={400}>
           {data.description}
         </Typography>
-      </Component.DivDescription>
-      <Component.DivAnnouncing>
-        <Component.InitialsAnnoucing>
+      </S.DivDescription>
+      {!advertiser ? (
+        <S.DivAnnouncing>
+          <S.InitialsAnnoucing>
+            <Typography tag={"p2"} fW={500}>
+              {splitName(data.advertiser)}
+            </Typography>
+          </S.InitialsAnnoucing>
           <Typography tag={"p2"} fW={500}>
-            {splitName(data.advertiser)}
+            {data.advertiser}
           </Typography>
-        </Component.InitialsAnnoucing>
-        <Typography tag={"p2"} fW={500}>
-          {data.advertiser}
-        </Typography>
-      </Component.DivAnnouncing>
-      <Component.DivKMPrice>
-        <Component.DivKM>
-          <Component.KM>
+        </S.DivAnnouncing>
+      ) : null}
+      <S.DivKMPrice>
+        <S.DivKM>
+          <S.KM>
             <Typography tag={"p2"} fW={500}>
               {data.km} KM
             </Typography>
-          </Component.KM>
-          <Component.KM>
+          </S.KM>
+          <S.KM>
             <Typography tag={"p2"} fW={500}>
               {data.year}
             </Typography>
-          </Component.KM>
-        </Component.DivKM>
+          </S.KM>
+        </S.DivKM>
         <Typography tag={"h7"} fW={500}>
           {numberFormatter(data.price)}
         </Typography>
-      </Component.DivKMPrice>
-    </Component.Container>
+      </S.DivKMPrice>
+      {advertiser ? (
+        <S.DivButtons>
+          <Button variant={"big45"} width={30} size={"medium"}>
+            Editar
+          </Button>
+          <Button variant={"big45"} width={35} size={"medium"}>
+            Ver como
+          </Button>
+        </S.DivButtons>
+      ) : null}
+    </S.Container>
   );
 }

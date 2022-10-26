@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { collorTypes } from "../../utils/collorTypes";
 
 export const Container = styled.div`
@@ -25,30 +25,6 @@ export const DivImage = styled.figure`
   border: 2px solid var(--grey7);
 `;
 
-interface iActive {
-  active: boolean;
-}
-export const Active = styled.div<iActive>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 8px;
-  gap: 10px;
-  width: 51px;
-  height: 24px;
-  left: 16px;
-  top: 11px;
-  position: absolute;
-  z-index: 1;
-  line-height: 24px;
-  background: ${(props) =>
-    props.active ? css`var(--brand1)` : css`var(--grey4)`};
-  p {
-    color: var(--whiteFixed);
-  }
-`;
-
 export const Image = styled.img`
   width: 90%;
   top: 1px;
@@ -71,9 +47,15 @@ export const DivDescription = styled.div`
   flex: none;
   flex-grow: 0;
   width: 312px;
-  height: 22px;
+  height: 48px;
   color: var(--grey2);
   line-height: 24px;
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
 `;
 
 export const DivAnnouncing = styled.div`
@@ -104,7 +86,7 @@ export const InitialsAnnoucing = styled.div`
 export const DivKMPrice = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   padding: 0px;
   gap: 28px;
@@ -128,13 +110,16 @@ export const KM = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px 8px;
-  gap: 10px;
-  width: 60px;
+  min-width: 85px;
   height: 32px;
   background: var(--brand4);
   border-radius: 4px;
   p {
     color: var(--brand1);
   }
+`;
+
+export const DivButtons = styled.div`
+  display: flex;
+  gap: 10px;
 `;
