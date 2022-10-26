@@ -1,8 +1,12 @@
+import { iAdvertiser } from "../../interfaces/advertiser.interface";
 import { Typography } from "../../styles/typography/typography";
 import { splitName } from "../../utils/splitName";
 import { Button } from "../Button";
 import * as S from "./styles";
-export function AdvertiserInformation({ user, create_ad }: any) {
+export function AdvertiserInformation({
+  user,
+  create_ad = false,
+}: iAdvertiser) {
   return (
     <S.DivStyled>
       <S.AvatarStyled>
