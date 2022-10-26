@@ -19,6 +19,9 @@ export function DeleteAdMotal() {
           firstButtonVariant={"negative"}
           secondButtonText={"Sim, excluir anúncio"}
           secondButtonVariant={"alert"}
+          position={"flex-end"}
+          firstButtonChangeWidth={25}
+          secondButtonChangeWidth={40}
         />
       </S.DivDeleteContentModal>
     </Modal>

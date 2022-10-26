@@ -6,6 +6,7 @@ export function Button({
   variant = "grey1",
   size = "big",
   width,
+  changeWidth,
   marginButton,
   ...rest
 }: iButton) {
@@ -15,6 +16,7 @@ export function Button({
       width={width}
       variant={variant}
       marginButton={marginButton}
+      changeWidth={changeWidth}
       {...rest}
     >
       {children}

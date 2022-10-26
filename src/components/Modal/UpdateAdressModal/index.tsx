@@ -28,6 +28,9 @@ export function UpdateAdressModal() {
           firstButtonVariant={"negative"}
           secondButtonText={"Salvar alterações"}
           secondButtonVariant={"brand1"}
+          position={"flex-end"}
+          firstButtonChangeWidth={30}
+          secondButtonChangeWidth={45}
         />
       </S.DivUpdateAdressContent>
     </Modal>

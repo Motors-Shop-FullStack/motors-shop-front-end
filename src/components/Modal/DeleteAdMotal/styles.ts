@@ -6,9 +6,4 @@ export const DivDeleteContentModal = styled(BaseDivContent)`
   display: flex;
   flex-direction: column;
   gap: 18px;
-  @media (min-width: 768px) {
-    button {
-      width: 30%;
-    }
-  }
 `;

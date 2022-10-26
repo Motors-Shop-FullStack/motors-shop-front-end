@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const DivButtonWrapper = styled.div`
+interface iPosition {
+  position?: "space-between" | "flex-end";
+}
+
+export const DivButtonWrapper = styled.div<iPosition>`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -9,7 +13,10 @@ export const DivButtonWrapper = styled.div`
     width: 100%;
     margin-bottom: 18px;
   }
-  button {
-    width: 48%;
+
+  @media (min-width: 768px) {
+    justify-content: ${(props) =>
+      props.position == "flex-end" ? "flex-end" : "space-between"};
+    gap: 10px;
   }
 `;

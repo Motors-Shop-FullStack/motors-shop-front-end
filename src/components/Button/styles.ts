@@ -11,6 +11,13 @@ export const ButtonBase = styled.button<iButton>`
   margin: ${(props) => props.marginButton};
   height: ${(props) => (props.size == "medium" ? "38px" : "48px")};
   width: ${(props) => propsWidth(props.width)};
+
+  @media (min-width: 768px) {
+    width: ${(props) =>
+      props.changeWidth
+        ? propsWidth(props.changeWidth)
+        : propsWidth(props.width)};
+  }
 `;
 
 export const Button = styled(ButtonBase)<iButton>`
