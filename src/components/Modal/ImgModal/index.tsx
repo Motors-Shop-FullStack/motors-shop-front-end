@@ -1,12 +1,12 @@
-import { Modal } from "..";
 import * as S from "./styles";
+import { ModalWrapper } from "../../Modal/ModalWrapper";
 
 export function ImageModal() {
   return (
-    <Modal title={"Imagem do veículo"}>
+    <ModalWrapper title={"Imagem do veículo"}>
       <S.FigureImg>
         <img src="#" alt="#" />
       </S.FigureImg>
-    </Modal>
+    </ModalWrapper>
   );
 }

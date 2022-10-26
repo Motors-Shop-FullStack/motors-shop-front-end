@@ -1,13 +1,13 @@
-import { Modal } from "..";
 import { Typography } from "../../../styles/typography/typography";
 import { DoubleButton } from "../../Button/DoubleButton";
 import { Input } from "../../Input";
+import { ModalWrapper } from "../../Modal/ModalWrapper";
 
 import * as S from "./styles";
 
 export function UpdateAdressModal() {
   return (
-    <Modal title={"Editar endereço"}>
+    <ModalWrapper title={"Editar endereço"}>
       <S.DivUpdateAdressContent as="form">
         <Typography tag={"p2"} fW={500} blck>
           Infomações de endereço
@@ -33,6 +33,6 @@ export function UpdateAdressModal() {
           secondButtonChangeWidth={45}
         />
       </S.DivUpdateAdressContent>
-    </Modal>
+    </ModalWrapper>
   );
 }

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Modal } from "..";
+import { useState } from "react";
 import { Typography } from "../../../styles/typography/typography";
 import { Button } from "../../Button";
 import { DoubleButton } from "../../Button/DoubleButton";
 import { Input } from "../../Input";
 import { Textarea } from "../../Textarea";
 import * as S from "./styles";
+import { ModalWrapper } from "../../Modal/ModalWrapper";
 
 export function CreateAdModal() {
   const [imgField, setImageField] = useState(1);
@@ -15,7 +15,7 @@ export function CreateAdModal() {
   };
 
   return (
-    <Modal title={"Criar anuncio"}>
+    <ModalWrapper title={"Criar anuncio"}>
       <S.DivCreateAdContent as="form" onSubmit={(event) => handleSubmit(event)}>
         <DoubleButton
           label={"Tipo de anuncio"}
@@ -83,6 +83,6 @@ export function CreateAdModal() {
           secondButtonVariant={"brand1"}
         />
       </S.DivCreateAdContent>
-    </Modal>
+    </ModalWrapper>
   );
 }

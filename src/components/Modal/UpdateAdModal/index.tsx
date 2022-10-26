@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Modal } from "..";
 import { Typography } from "../../../styles/typography/typography";
 import { Button } from "../../Button";
 import { DoubleButton } from "../../Button/DoubleButton";
 import { Input } from "../../Input";
 import { Textarea } from "../../Textarea";
 import * as S from "./styles";
+import { ModalWrapper } from "../../Modal/ModalWrapper";
 
 export function UpdateAdModal() {
   const [imgField, setImageField] = useState(1);
@@ -14,7 +14,7 @@ export function UpdateAdModal() {
     event.preventDefault();
   };
   return (
-    <Modal title={"Editar anúncio"}>
+    <ModalWrapper title={"Editar anúncio"}>
       <S.DivUpdateAdContent as="form" onSubmit={(event) => handleSubmit(event)}>
         <DoubleButton
           label={"Tipo de anuncio"}
@@ -97,6 +97,6 @@ export function UpdateAdModal() {
           secondButtonChangeWidth={185}
         />
       </S.DivUpdateAdContent>
-    </Modal>
+    </ModalWrapper>
   );
 }

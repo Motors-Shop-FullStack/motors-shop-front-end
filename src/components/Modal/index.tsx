@@ -1,20 +1,44 @@
 import { iModal } from "../../interfaces/modal.interface";
+import { useModal } from "../../providers/modalProvider";
 import { Typography } from "../../styles/typography/typography";
 import * as S from "./styles";
 import { CgClose } from "react-icons/cg";
+import { CreateAdModal } from "./CreateAdModal";
+import { DeleteAdMotal } from "./DeleteAdMotal";
+import { ImageModal } from "./ImgModal";
+import { SucessModal } from "./SucessModal";
+import { UpdateAdModal } from "./UpdateAdModal";
+import { UpdateAdressModal } from "./UpdateAdressModal";
+import { UpdateProfileModal } from "./UpdateProfileModal";
 
-export function Modal({ children, title }: iModal) {
+export function Modal() {
+  const {
+    createAdModal,
+    deleteModal,
+    imgModal,
+    sucessModal,
+    updateAdModal,
+    updateAdressModal,
+    updateProfileModal,
+  } = useModal();
+
   return (
-    <S.Container>
-      <S.ModalWrapper>
-        <S.HeaderModal>
-          <Typography tag="h7">{title}</Typography>
-          <S.ButtonHeader>
-            <CgClose size={22} />
-          </S.ButtonHeader>
-        </S.HeaderModal>
-        {children}
-      </S.ModalWrapper>
-    </S.Container>
+    <>
+      {createAdModal ? (
+        <CreateAdModal />
+      ) : deleteModal ? (
+        <DeleteAdMotal />
+      ) : imgModal ? (
+        <ImageModal />
+      ) : sucessModal ? (
+        <SucessModal />
+      ) : updateAdModal ? (
+        <UpdateAdModal />
+      ) : updateAdressModal ? (
+        <UpdateAdressModal />
+      ) : updateProfileModal ? (
+        <UpdateProfileModal />
+      ) : null}
+    </>
   );
 }

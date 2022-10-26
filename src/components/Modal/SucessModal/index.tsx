@@ -1,11 +1,11 @@
-import { Modal } from "..";
 import { Typography } from "../../../styles/typography/typography";
 import { Button } from "../../Button";
 import * as S from "./styles";
+import { ModalWrapper } from "../../Modal/ModalWrapper";
 
 export function SucessModal() {
   return (
-    <Modal title={"Sucesso!"}>
+    <ModalWrapper title={"Sucesso!"}>
       <S.DivSucessContent>
         <Typography tag={"h7"}>Sua conta foi criada com sucesso!</Typography>
         <Typography tag={"p1"}>
@@ -15,6 +15,6 @@ export function SucessModal() {
           Ir para o login
         </Button>
       </S.DivSucessContent>
-    </Modal>
+    </ModalWrapper>
   );
 }
