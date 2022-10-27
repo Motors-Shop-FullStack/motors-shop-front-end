@@ -7,6 +7,15 @@ export const Main = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 768px) {
+    gap: 15px;
+  }
+
+  @media (min-width: 1300px) {
+    flex-direction: row;
+    gap: 25px;
+  }
 `;
 
 export const BaseDiv = styled.div`
@@ -41,6 +50,12 @@ export const DivInfos = styled(BaseDiv)`
   height: 330px;
   margin-top: 15px;
   padding: 44px 28px;
+
+  @media (min-width: 768px) {
+    width: 752px;
+    padding: 28px 44px;
+    height: 239px;
+  }
 `;
 
 export const DivButtons = styled.div`
@@ -50,6 +65,21 @@ export const DivButtons = styled.div`
   width: 50%;
   height: 100px;
   gap: 10px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 55px;
+    button {
+      width: 25%;
+    }
+    h6 {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
 `;
 
 export const DivDescription = styled(DivInfos)`
@@ -80,6 +110,17 @@ export const DivPictures = styled(DivInfos)`
       height: 50px;
     }
   }
+
+  @media (min-width: 768px) {
+    margin-top: 0px;
+    width: 752px;
+    figure {
+      margin-top: 0px;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const DivUser = styled(DivInfos)`
@@ -88,11 +129,17 @@ export const DivUser = styled(DivInfos)`
   align-items: center;
   height: 398px;
   gap: 28px;
+  @media (min-width: 768px) {
+    width: 752px;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const DivName = styled.div`
   display: flex;
-  /* margin-bottom: 28px; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -108,3 +155,20 @@ export const DivName = styled.div`
 `;
 
 export const DivDescriptionUser = styled.div``;
+
+export const DivProduct = styled.section`
+  @media (min-width: 768px) {
+    width: 752px;
+  }
+`;
+
+export const DivImgAndUser = styled.section`
+  @media (min-width: 768px) {
+    width: 752px;
+  }
+
+  @media (min-width: 1300px) {
+    width: 440px;
+    margin-top: -15px;
+  }
+`;
