@@ -5,6 +5,7 @@ import { Typography } from "../../styles/typography/typography";
 import { Button } from "../../components/Button";
 import { numberFormatter } from "../../utils/formatterNumber";
 import { splitName } from "../../utils/splitName";
+import { Footer } from "../../components/Footer";
 
 export function ProductPage() {
   return (
@@ -94,6 +95,7 @@ export function ProductPage() {
           </S.DivUser>
         </S.DivImgAndUser>
       </S.Main>
+      <Footer />
     </>
   );
 }
