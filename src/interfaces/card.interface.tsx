@@ -14,3 +14,8 @@ export type iCardType = {
   advertiser: string;
   image: string;
 };
+
+export interface iActive {
+  active: boolean;
+}
+
