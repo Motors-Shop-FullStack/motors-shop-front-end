@@ -4,6 +4,7 @@ import carro from "../../assets/img/carro.png";
 import { Typography } from "../../styles/typography/typography";
 import { Button } from "../../components/Button";
 import { numberFormatter } from "../../utils/formatterNumber";
+import { splitName } from "../../utils/splitName";
 
 export function ProductPage() {
   return (
@@ -68,7 +69,25 @@ export function ProductPage() {
             <img src={carro} alt="#" />
           </figure>
         </S.DivPictures>
-        <S.DivUser></S.DivUser>
+        <S.DivUser>
+          <S.DivName>
+            <Typography tag={"p2"} fW={500}>
+              {splitName("Kenzinho Aluno")}
+            </Typography>
+          </S.DivName>
+          <Typography tag={"h6"} fW={600}>
+            Kenzinho Aluno
+          </Typography>
+          <S.DivDescriptionUser>
+            <Typography tag={"p1"} fW={400}>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's
+            </Typography>
+          </S.DivDescriptionUser>
+          <Button variant={"grey1"} width={206}>
+            Ver todos anuncios
+          </Button>
+        </S.DivUser>
       </S.Main>
     </>
   );
