@@ -1,12 +1,11 @@
-
-import { ProductPage } from "./pages/Product";
+import { ProfilePage } from "./pages/Profile";
 import GlobalStyles from "./styles/global";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <ProductPage />
+      <ProfilePage />
     </>
   );
 }

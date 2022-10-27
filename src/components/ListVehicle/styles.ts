@@ -5,9 +5,16 @@ export const DivStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 26px;
+  margin-left: 20px;
   margin-top: 40px;
   margin-bottom: 100px;
+
+  @media (min-width: 600px) {
+    margin-left: 40px;
+  }
+  @media (min-width: 500px) {
+    margin-left: 60px;
+  }
 `;
 
 export const SectionVehicle = styled.section`
@@ -33,5 +40,8 @@ export const SectionVehicle = styled.section`
 
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+  @media (min-width: 724px) {
+    gap: 40px;
   }
 `;

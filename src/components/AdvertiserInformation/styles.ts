@@ -17,7 +17,7 @@ export const DivStyled = styled.div`
   @media (min-width: 724px) {
     max-width: 1240px;
     width: 70%;
-    height: 327;
+    height: 327px;
   }
 `;
 export const AvatarStyled = styled.div`
