@@ -12,3 +12,7 @@ export interface iCard {
     image: string;
   };
 }
+
+export interface iActive {
+  active: boolean;
+}
