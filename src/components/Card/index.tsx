@@ -7,11 +7,18 @@ import { Button } from "../Button";
 
 export function Card({ data }: iCard) {
   //Verificar qual propriedade iremos utilizar do BD
-  const advertiser = true;
+  const advertiser = false;
 
   return (
     <S.Container>
       <S.DivImage>
+        {advertiser ? (
+          <S.Active active={data.active}>
+            <Typography tag={"p2"} fW={500}>
+              {data.active ? "Ativo" : "Inativo"}
+            </Typography>
+          </S.Active>
+        ) : null}
         <S.Image src={data.image} alt={data.title} />
       </S.DivImage>
       <S.DivTitle>

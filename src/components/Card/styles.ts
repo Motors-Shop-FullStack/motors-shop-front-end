@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { iActive } from "../../interfaces/card.interface";
 import { collorTypes } from "../../utils/collorTypes";
 
 export const Container = styled.div`
@@ -122,4 +123,30 @@ export const KM = styled.div`
 export const DivButtons = styled.div`
   display: flex;
   gap: 10px;
+`;
+
+export const Active = styled.div<iActive>`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 312px;
+  height: 152px;
+  background: var(--grey7);
+  border: 2px solid var(--grey7);
+  align-items: center;
+  padding: 0px 8px;
+  gap: 10px;
+  width: 51px;
+  height: 24px;
+  left: 16px;
+  top: 11px;
+  position: absolute;
+  z-index: 1;
+  line-height: 24px;
+  background: ${(props) =>
+    props.active ? css`var(--brand1)` : css`var(--grey4)`};
+  p {
+    color: var(--whiteFixed);
+  }
 `;
