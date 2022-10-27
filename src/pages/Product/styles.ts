@@ -7,6 +7,7 @@ export const Main = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 45px;
 
   @media (min-width: 768px) {
     gap: 15px;
