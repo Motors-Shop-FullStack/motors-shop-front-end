@@ -17,7 +17,7 @@ export const DivStyled = styled.div`
   @media (min-width: 724px) {
     max-width: 1240px;
     width: 70%;
-    height: 406px;
+    height: 327;
   }
 `;
 export const AvatarStyled = styled.div`
@@ -37,7 +37,13 @@ export const AvatarStyled = styled.div`
 export const SectionStyled = styled.section`
   display: flex;
   justify-content: space-between;
-  @media (min-width: 724px) {
-    width: 50%;
+  @media (min-width: 768px) {
+    width: 55%;
+  }
+  @media (min-width: 1024px) {
+    width: 40%;
+  }
+  @media (min-width: 1440px) {
+    width: 28%;
   }
 `;

@@ -6,5 +6,5 @@ export type iAdvertiserType = {
 
 export interface iAdvertiser {
   user: iAdvertiserType;
-  create_ad: boolean;
+  create_ad?: boolean;
 }

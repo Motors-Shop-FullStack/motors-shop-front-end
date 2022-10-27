@@ -1,3 +1,4 @@
+
 import { ProductPage } from "./pages/Product";
 import GlobalStyles from "./styles/global";
 
