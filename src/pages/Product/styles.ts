@@ -17,6 +17,7 @@ export const Main = styled.main`
     flex-direction: row;
     align-items: flex-start;
     gap: 25px;
+    flex-wrap: wrap;
   }
 `;
 
@@ -27,6 +28,21 @@ export const BaseDiv = styled.div`
 
   @media (min-width: 768px) {
     width: 752px;
+  }
+`;
+export const Product = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1300px) {
+    flex-direction: row;
+    gap: 45px;
+  }
+`;
+
+export const Comments = styled.div`
+  @media (min-width: 1237px) {
+    width: 1237px;
+    display: flex;
   }
 `;
 
@@ -231,6 +247,13 @@ export const DivNewComment = styled(BaseWrapper)`
   gap: 15px;
 `;
 
+export const DivCommentUser = styled.div`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+`;
+
 export const DivUserNewComment = styled.div`
   display: flex;
   flex-direction: column;
@@ -246,11 +269,4 @@ export const DivUserNewComment = styled.div`
     font-size: 16px;
     color: var(--whiteFixed);
   }
-`;
-
-export const DivDiv = styled.div`
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin-bottom: 15px;
 `;
