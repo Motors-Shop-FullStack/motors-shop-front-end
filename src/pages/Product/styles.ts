@@ -15,19 +15,30 @@ export const Main = styled.main`
 
   @media (min-width: 1300px) {
     flex-direction: row;
+    align-items: flex-start;
     gap: 25px;
   }
 `;
 
 export const BaseDiv = styled.div`
-  max-width: 351px;
+  width: 351px;
   background-color: var(--grey10);
   border-radius: 4px;
 
   @media (min-width: 768px) {
-    max-width: 752px;
+    width: 752px;
   }
 `;
+
+export const BaseWrapper = styled(BaseDiv)`
+  padding: 44px 28px;
+
+  @media (min-width: 768px) {
+    padding: 44px 36px;
+  }
+`;
+
+export const SectionProduct = styled.section``;
 
 export const DivImg = styled(BaseDiv)`
   margin-top: 45px;
@@ -47,16 +58,8 @@ export const DivImg = styled(BaseDiv)`
   }
 `;
 
-export const DivInfos = styled(BaseDiv)`
-  height: 330px;
+export const DivInfos = styled(BaseWrapper)`
   margin-top: 15px;
-  padding: 44px 28px;
-
-  @media (min-width: 768px) {
-    width: 752px;
-    padding: 28px 44px;
-    height: 239px;
-  }
 `;
 
 export const DivButtons = styled.div`
@@ -83,20 +86,33 @@ export const DivButtons = styled.div`
   }
 `;
 
-export const DivDescription = styled(DivInfos)`
+export const DivDescription = styled(BaseWrapper)`
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 `;
 
-export const DivPictures = styled(DivInfos)`
+export const SectionImageAdvertise = styled.section`
+  width: 351px;
+
+  @media (min-width: 768px) {
+    width: 752px;
+  }
+
+  @media (min-width: 1300px) {
+    width: 440px;
+  }
+`;
+
+export const DivPictures = styled(BaseWrapper)`
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 100%;
+  gap: 30px;
   h6 {
     width: 100%;
-    margin: 0 0 30px 0;
   }
   figure {
     background-color: var(--grey7);
@@ -105,34 +121,34 @@ export const DivPictures = styled(DivInfos)`
     justify-content: center;
     width: 90px;
     height: 90px;
-    margin-bottom: 50px;
+
     img {
       width: 100%;
       height: 50px;
     }
   }
-
-  @media (min-width: 768px) {
-    margin-top: 0px;
-    width: 752px;
-    figure {
-      margin-top: 0px;
-    }
-  }
   @media (min-width: 768px) {
     width: 100%;
   }
+  @media (min-width: 1300px) {
+    margin-top: 45px;
+  }
 `;
 
-export const DivUser = styled(DivInfos)`
+export const DivImgs = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex-grow: 1;
+`;
+
+export const DivUser = styled(BaseWrapper)`
+  margin: 15px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 398px;
   gap: 28px;
-  @media (min-width: 768px) {
-    width: 752px;
-  }
 
   @media (min-width: 768px) {
     width: 100%;
@@ -141,10 +157,8 @@ export const DivUser = styled(DivInfos)`
 
 export const DivName = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px;
   width: 77px;
   height: 77px;
   background: var(${collorTypes()});
@@ -155,21 +169,88 @@ export const DivName = styled.div`
   }
 `;
 
-export const DivDescriptionUser = styled.div``;
+export const SectionComments = styled.section`
+  width: 351px;
 
-export const DivProduct = styled.section`
   @media (min-width: 768px) {
-    width: 752px;
+    width: 751px;
   }
 `;
 
-export const DivImgAndUser = styled.section`
-  @media (min-width: 768px) {
-    width: 752px;
+export const DivUserTitle = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  span {
+    font-family: "Inter";
+    color: var(--grey3);
   }
+  .circle {
+    width: 5px;
+    height: 5px;
+    background: var(--grey3);
+    border-radius: 50%;
+  }
+`;
 
-  @media (min-width: 1300px) {
-    width: 440px;
-    margin-top: -15px;
+export const DivComments = styled(BaseWrapper)`
+  h6 {
+    margin-bottom: 25px;
   }
+`;
+
+export const DivPost = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+`;
+
+export const Post = styled.div``;
+
+export const DivNameComment = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 32px;
+  height: 32px;
+  background: var(${collorTypes()});
+  border-radius: 50%;
+  p {
+    font-size: 16px;
+    color: var(--whiteFixed);
+  }
+`;
+
+export const DivNewComment = styled(BaseWrapper)`
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+`;
+
+export const DivUserNewComment = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 32px;
+  height: 32px;
+  background: var(${collorTypes()});
+  border-radius: 50%;
+
+  p {
+    font-size: 16px;
+    color: var(--whiteFixed);
+  }
+`;
+
+export const DivDiv = styled.div`
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
 `;

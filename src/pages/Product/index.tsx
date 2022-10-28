@@ -4,15 +4,16 @@ import carro from "../../assets/img/carro.png";
 import { Typography } from "../../styles/typography/typography";
 import { Button } from "../../components/Button";
 import { numberFormatter } from "../../utils/formatterNumber";
-import { splitName } from "../../utils/splitName";
 import { Footer } from "../../components/Footer";
+import { splitName } from "../../utils/splitName";
+import { Textarea } from "../../components/Textarea";
 
 export function ProductPage() {
   return (
     <>
       <Header />
       <S.Main>
-        <S.DivProduct>
+        <S.SectionProduct>
           <S.DivImg>
             <figure>
               <img src={carro} alt="#" />
@@ -48,30 +49,33 @@ export function ProductPage() {
               type and scrambled it to make a type specimen book.
             </Typography>
           </S.DivDescription>
-        </S.DivProduct>
-        <S.DivImgAndUser>
+        </S.SectionProduct>
+
+        <S.SectionImageAdvertise>
           <S.DivPictures>
             <Typography tag={"h6"} fW={600}>
               Fotos
             </Typography>
-            <figure>
-              <img src={carro} alt="#" />
-            </figure>
-            <figure>
-              <img src={carro} alt="#" />
-            </figure>
-            <figure>
-              <img src={carro} alt="#" />
-            </figure>
-            <figure>
-              <img src={carro} alt="#" />
-            </figure>
-            <figure>
-              <img src={carro} alt="#" />
-            </figure>
-            <figure>
-              <img src={carro} alt="#" />
-            </figure>
+            <S.DivImgs>
+              <figure>
+                <img src={carro} alt="#" />
+              </figure>
+              <figure>
+                <img src={carro} alt="#" />
+              </figure>
+              <figure>
+                <img src={carro} alt="#" />
+              </figure>
+              <figure>
+                <img src={carro} alt="#" />
+              </figure>
+              <figure>
+                <img src={carro} alt="#" />
+              </figure>
+              <figure>
+                <img src={carro} alt="#" />
+              </figure>
+            </S.DivImgs>
           </S.DivPictures>
 
           <S.DivUser>
@@ -83,17 +87,94 @@ export function ProductPage() {
             <Typography tag={"h6"} fW={600}>
               Kenzinho Aluno
             </Typography>
-            <S.DivDescriptionUser>
+            <div>
               <Typography tag={"p1"} fW={400}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's
               </Typography>
-            </S.DivDescriptionUser>
+            </div>
             <Button variant={"grey1"} width={206}>
               Ver todos anuncios
             </Button>
           </S.DivUser>
-        </S.DivImgAndUser>
+        </S.SectionImageAdvertise>
+
+        <S.SectionComments>
+          <S.DivComments>
+            <Typography tag={"h6"} fW={400}>
+              Comentários
+            </Typography>
+
+            <S.DivPost>
+              <S.DivUserTitle>
+                <S.DivNameComment>
+                  <Typography tag={"p2"} fW={500}>
+                    {splitName("Júlia Lima")}
+                  </Typography>
+                </S.DivNameComment>
+                <Typography tag={"p2"} fW={500} blck>
+                  Júlia Lima
+                </Typography>
+                <span className="circle"></span>
+                <span>há 3 dias</span>
+              </S.DivUserTitle>
+              <S.Post>
+                <Typography tag={"p2"} fW={400}>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </Typography>
+              </S.Post>
+            </S.DivPost>
+
+            <S.DivPost>
+              <S.DivUserTitle>
+                <S.DivNameComment>
+                  <Typography tag={"p2"} fW={500}>
+                    {splitName("Júlia Lima")}
+                  </Typography>
+                </S.DivNameComment>
+                <Typography tag={"p2"} fW={500} blck>
+                  Júlia Lima
+                </Typography>
+                <span className="circle"></span>
+                <span>há 3 dias</span>
+              </S.DivUserTitle>
+              <S.Post>
+                <Typography tag={"p2"} fW={400}>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </Typography>
+              </S.Post>
+            </S.DivPost>
+          </S.DivComments>
+
+          <S.DivNewComment>
+            <S.DivDiv>
+              <S.DivUserNewComment>
+                <Typography tag={"p2"} fW={500}>
+                  {splitName("Júlia Lima")}
+                </Typography>
+              </S.DivUserNewComment>
+              <Typography tag={"p2"} fW={500}>
+                Júlia Lima
+              </Typography>
+            </S.DivDiv>
+            <Textarea
+              placeholder={
+                "Carro muito confortável, foi uma ótima experiência de compra..."
+              }
+            />
+            <Button variant={"brand1"} width={25}>
+              Comentar{" "}
+            </Button>
+          </S.DivNewComment>
+        </S.SectionComments>
       </S.Main>
       <Footer />
     </>
