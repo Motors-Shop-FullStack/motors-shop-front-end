@@ -7,8 +7,20 @@ import { numberFormatter } from "../../utils/formatterNumber";
 import { Footer } from "../../components/Footer";
 import { splitName } from "../../utils/splitName";
 import { Textarea } from "../../components/Textarea";
+import { iProduct } from "../../interfaces/product";
+import { useModal } from "../../providers/modalProvider";
+import { Modal } from "../../components/Modal";
+import { ImageModal } from "../../components/Modal/ImgModal";
 
-export function ProductPage() {
+export function ProductPage(product: iProduct) {
+  const { imgModal, setImgModal, setShowImg } = useModal();
+
+  const handleClickImgModal = (event: number) => {
+    const img = product.product.ad.imgs[event];
+    setShowImg(img);
+    setImgModal(!imgModal);
+  };
+
   return (
     <>
       <Header />
@@ -17,22 +29,22 @@ export function ProductPage() {
           <S.SectionProduct>
             <S.DivImg>
               <figure>
-                <img src={carro} alt="#" />
+                <img src={product.product.ad.mainImg} alt="#" />
               </figure>
             </S.DivImg>
             <S.DivInfos>
               <Typography tag={"h6"} fW={600}>
-                Mercedes Benz A 200 CGI ADVANCE SEDAN Mercedes Benz A 200
+                {product.product.ad.title}
               </Typography>
               <S.DivButtons>
                 <Button variant={"brandOpacity"} width={45} size={"medium"}>
-                  2013
+                  {product.product.ad.year}
                 </Button>
                 <Button variant={"brandOpacity"} width={45} size={"medium"}>
-                  0
+                  {product.product.ad.km} KM
                 </Button>
                 <Typography tag={"h7"} fW={500}>
-                  {numberFormatter(1000)}
+                  {numberFormatter(product.product.ad.price)}
                 </Typography>
               </S.DivButtons>
               <Button variant={"brand1"} width={45} changeWidth={20}>
@@ -44,10 +56,7 @@ export function ProductPage() {
                 Descrição
               </Typography>
               <Typography tag={"p1"} fW={400}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                {product.product.ad.description}
               </Typography>
             </S.DivDescription>
           </S.SectionProduct>
@@ -58,40 +67,29 @@ export function ProductPage() {
                 Fotos
               </Typography>
               <S.DivImgs>
-                <figure>
-                  <img src={carro} alt="#" />
-                </figure>
-                <figure>
-                  <img src={carro} alt="#" />
-                </figure>
-                <figure>
-                  <img src={carro} alt="#" />
-                </figure>
-                <figure>
-                  <img src={carro} alt="#" />
-                </figure>
-                <figure>
-                  <img src={carro} alt="#" />
-                </figure>
-                <figure>
-                  <img src={carro} alt="#" />
-                </figure>
+                {product.product.ad.imgs.map((img, index) => (
+                  <figure
+                    key={index}
+                    onClick={() => handleClickImgModal(index)}
+                  >
+                    <img src={img} alt="#" id={index.toString()} />
+                  </figure>
+                ))}
               </S.DivImgs>
             </S.DivPictures>
 
             <S.DivUser>
               <S.DivName>
                 <Typography tag={"p2"} fW={500}>
-                  {splitName("Kenzinho Aluno")}
+                  {splitName(product.product.user.name)}
                 </Typography>
               </S.DivName>
               <Typography tag={"h6"} fW={600}>
-                Kenzinho Aluno
+                {product.product.user.name}
               </Typography>
               <div>
                 <Typography tag={"p1"} fW={400}>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
+                  {product.product.user.description}
                 </Typography>
               </div>
               <Button variant={"grey1"} width={206}>
@@ -181,6 +179,7 @@ export function ProductPage() {
         </S.Comments>
       </S.Main>
       <Footer />
+      <Modal />
     </>
   );
 }

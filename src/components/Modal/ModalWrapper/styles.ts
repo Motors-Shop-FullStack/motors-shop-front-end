@@ -3,9 +3,10 @@ import styled from "styled-components";
 export const Container = styled.main`
   background-color: rgb(0, 0, 0, 0.5);
   width: 100vw;
-  height: 100vh;
-  z-index: 1000;
+  min-height: 100%;
+  height: auto;
   top: 0;
+  position: fixed;
 `;
 
 export const ModalWrapper = styled.div`
