@@ -8,4 +8,7 @@ export const FigureImg = styled.figure`
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    width: 100%;
+  }
 `;

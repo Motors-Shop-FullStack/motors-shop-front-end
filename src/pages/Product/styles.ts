@@ -40,7 +40,7 @@ export const Product = styled.div`
 `;
 
 export const Comments = styled.div`
-  @media (min-width: 1237px) {
+  @media (min-width: 1300px) {
     width: 1237px;
     display: flex;
   }
@@ -157,6 +157,9 @@ export const DivImgs = styled.div`
   justify-content: space-evenly;
   gap: 10px;
   flex-grow: 1;
+  figure {
+    cursor: pointer;
+  }
 `;
 
 export const DivUser = styled(BaseWrapper)`
