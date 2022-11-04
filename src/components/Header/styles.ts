@@ -9,7 +9,13 @@ export const HeaderStyled = styled.header`
   align-items: center;
   background-color: var(--grey10);
   border-bottom: 2px solid var(--grey6);
-  padding: 0 60px;
+  padding: 0 20px;
+  @media (min-width: 600px) {
+    padding: 0 40px;
+  }
+  @media (min-width: 500px) {
+    padding: 0 60px;
+  }
 `;
 
 export const Burguer = styled.div`
