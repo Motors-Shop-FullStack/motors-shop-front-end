@@ -10,6 +10,8 @@ interface iModalContext {
   deleteModal: boolean;
   setDeleteModal: (newValue: boolean) => void;
   imgModal: boolean;
+  showImg: string;
+  setShowImg: (newValue: string) => void;
   setImgModal: (newValue: boolean) => void;
   sucessModal: boolean;
   setSucessModal: (newValue: boolean) => void;
@@ -28,6 +30,8 @@ const defaultValue: iModalContext = {
   setDeleteModal: () => {},
   imgModal: false,
   setImgModal: () => {},
+  showImg: "",
+  setShowImg: () => "",
   sucessModal: false,
   setSucessModal: () => {},
   updateAdModal: false,
@@ -46,6 +50,7 @@ export const ModalProvider = ({ children }: iModalProvider) => {
   );
   const [deleteModal, setDeleteModal] = useState(defaultValue.deleteModal);
   const [imgModal, setImgModal] = useState(defaultValue.imgModal);
+  const [showImg, setShowImg] = useState(defaultValue.showImg);
   const [sucessModal, setSucessModal] = useState(defaultValue.sucessModal);
   const [updateAdModal, setUpdateAdModal] = useState(
     defaultValue.updateAdModal
@@ -66,6 +71,8 @@ export const ModalProvider = ({ children }: iModalProvider) => {
         setDeleteModal,
         imgModal,
         setImgModal,
+        showImg,
+        setShowImg,
         sucessModal,
         setSucessModal,
         updateAdModal,
